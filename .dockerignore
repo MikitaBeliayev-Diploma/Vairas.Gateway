@@ -1,0 +1,11 @@
+**/bin
+**/obj
+.git
+.local
+evidence
+Vairas.Gateway.Tests
+Vairas.Gateway.ServiceTests
+**/appsettings.Local.json
+**/*.pfx
+**/*.pem
+**/*.key

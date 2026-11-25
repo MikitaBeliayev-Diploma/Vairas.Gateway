@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><IsTestProject>true</IsTestProject><IsPackable>false</IsPackable></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Vairas.Gateway/Vairas.Gateway.csproj" Aliases="GatewayApi" />
+    <ProjectReference Include="../../Vairas.SchoolManagement/Vairas.SchoolManagement.Tests/Vairas.SchoolManagement.Tests.csproj" Aliases="SchoolTests" />
+    <ProjectReference Include="../../Vairas.DocumentManagement/Vairas.DocumentManagement/Vairas.DocumentManagement.csproj" Aliases="DocumentsApi" />
+    <ProjectReference Include="../../Vairas.UserManagement/Vairas.UserManagement/Vairas.UserManagement.csproj" Aliases="UserApi" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="coverlet.collector" Version="6.0.4" PrivateAssets="all" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.15" />
+    <PackageReference Include="Testcontainers.PostgreSql" Version="4.17.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+namespace Vairas.Gateway.Configuration;
+
+public static class ConfigureOpenApi
+{
+    public static IServiceCollection AddOpenApiDocument(this IServiceCollection services) => services.AddOpenApi();
+
+    /// <summary>The OpenAPI document is served only by local Development and Testing hosts.</summary>
+    public static WebApplication MapOpenApiDocument(this WebApplication app)
+    {
+        if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Testing"))
+            app.MapOpenApi();
+        return app;
+    }
+}

@@ -1,0 +1,1597 @@
+{
+  "PublicRoutes": [
+    {
+      "Id": "authentication.beginOidc.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/oidc/requests",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.completeAccountChallenge.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/challenges/completion",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.completeOidc.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/oidc/callback",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.getIssuerDiscovery.get",
+      "Service": "authentication",
+      "Method": "GET",
+      "Path": "/.well-known/openid-configuration",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.getSigningKeys.get",
+      "Service": "authentication",
+      "Method": "GET",
+      "Path": "/.well-known/jwks.json",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.loginIdentity.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/login",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.registerIdentity.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/registrations",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.requestAccountChallenge.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/challenges",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.revokeOwnSession.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/sessions/{sessionId}/revocation",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "authentication.rotateRefreshToken.post",
+      "Service": "authentication",
+      "Method": "POST",
+      "Path": "/api/v1/auth/refresh",
+      "Anonymous": true,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.archiveChatSession.post",
+      "Service": "chat",
+      "Method": "POST",
+      "Path": "/api/v1/chat/sessions/{sessionId}/archive",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.createChatSession.post",
+      "Service": "chat",
+      "Method": "POST",
+      "Path": "/api/v1/chat/sessions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.executeConfirmedChatLessonAction.post",
+      "Service": "chat",
+      "Method": "POST",
+      "Path": "/api/v1/chat/action-previews/{previewId}/executions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.getAssistantAudit.get",
+      "Service": "chat",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/assistant-audit",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.getAssistantRun.get",
+      "Service": "chat",
+      "Method": "GET",
+      "Path": "/api/v1/chat/sessions/{sessionId}/runs/{runId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.getChatActionPreview.get",
+      "Service": "chat",
+      "Method": "GET",
+      "Path": "/api/v1/chat/action-previews/{previewId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.getChatHistory.get",
+      "Service": "chat",
+      "Method": "GET",
+      "Path": "/api/v1/chat/sessions/{sessionId}/messages",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.getChatLessonExecution.get",
+      "Service": "chat",
+      "Method": "GET",
+      "Path": "/api/v1/chat/action-previews/{previewId}/execution",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.getChatSession.get",
+      "Service": "chat",
+      "Method": "GET",
+      "Path": "/api/v1/chat/sessions/{sessionId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.listChatSessions.get",
+      "Service": "chat",
+      "Method": "GET",
+      "Path": "/api/v1/chat/sessions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.recordExactChatApproval.post",
+      "Service": "chat",
+      "Method": "POST",
+      "Path": "/api/v1/chat/action-previews/{previewId}/confirmations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "chat.sendChatMessage.post",
+      "Service": "chat",
+      "Method": "POST",
+      "Path": "/api/v1/chat/sessions/{sessionId}/messages",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.activateDocumentTemplateVersion.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/document-templates/{templateId}/versions/{versionId}/activate",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.addDocumentTemplateVersion.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/document-templates/{templateId}/versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.archiveDocumentTemplateVersion.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/document-templates/{templateId}/versions/{versionId}/archive",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.attachContractSignedCopy.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/contracts/{contractId}/signed-copies",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.cancelTrainingContract.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/contracts/{contractId}/cancel",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.clearTrainingDocument.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/documents/{documentId}/versions/{versionId}/clear",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.createDocumentTemplate.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/document-templates",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.downloadDocumentContent.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/document-downloads/{grantId}",
+      "Anonymous": false,
+      "FileTransfer": true,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.generateCompletionReport.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/enrollments/{enrollmentId}/completion-reports",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.generatePracticalJournal.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/enrollments/{enrollmentId}/journals",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.generateTrainingContract.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/contracts",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getDocumentDownload.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/documents/{documentId}/download",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getDocumentFileStatus.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/document-files/{fileId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getDocumentJob.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/document-jobs/{jobId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getDocumentTemplate.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/document-templates/{templateId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getTrainingContract.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/contracts/{contractId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getTrainingContractHistory.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/contracts/{contractId}/history",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getTrainingDocument.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/documents/{documentId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.getTrainingDocumentHistory.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/documents/{documentId}/history",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.listDocumentTemplates.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/document-templates",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.listEnrollmentContracts.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/enrollments/{enrollmentId}/contracts",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.listEnrollmentDocuments.get",
+      "Service": "document-management",
+      "Method": "GET",
+      "Path": "/api/v1/enrollments/{enrollmentId}/documents",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.publishTrainingDocument.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/documents/{documentId}/versions/{versionId}/publish",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.renameDocumentTemplate.put",
+      "Service": "document-management",
+      "Method": "PUT",
+      "Path": "/api/v1/schools/{schoolId}/document-templates/{templateId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.reviewTrainingDocument.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/documents/{documentId}/versions/{versionId}/review",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.selectTrainingDocument.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/documents/{documentId}/versions/{versionId}/select",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "document-management.uploadDocumentFile.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/document-files",
+      "Anonymous": false,
+      "FileTransfer": true,
+      "Upload": true
+    },
+    {
+      "Id": "document-management.withdrawTrainingDocument.post",
+      "Service": "document-management",
+      "Method": "POST",
+      "Path": "/api/v1/documents/{documentId}/versions/{versionId}/withdraw",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.changeProgramLifecycle.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/training-program-versions/{versionId}/{transition}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.confirmPracticalRecord.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/practical-records/{recordId}/confirmations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.confirmTheoryRecord.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/theory-records/{recordId}/confirmations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.createPracticalRecord.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/practical-records",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.createProgramVersion.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/training-programs/{programId}/versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.createTrainingProgram.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/training-programs",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.decideReadiness.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/readiness-decisions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.declareManualReporting.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/reporting-declarations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getReportingDeclarations.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/reporting-declarations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.disputePracticalRecord.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/practical-records/{recordId}/disputes",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.editProgramDraft.put",
+      "Service": "learning-tracking",
+      "Method": "PUT",
+      "Path": "/api/v1/training-programs/{programId}/versions/{versionId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.evaluateReadiness.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/readiness-evaluations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getAssessmentResultHistory.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/assessments/{assessmentId}/versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getAssessmentResults.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/assessments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getPracticalRecord.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/practical-records/{recordId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getProgramVersion.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/training-program-versions/{versionId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getReadiness.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/readiness",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getStudentProgress.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/progress",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getTheoryRecord.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/theory-records/{recordId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getTrainingEvidence.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/training-evidence/{snapshotId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.listPracticalRecords.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/practical-records",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.listProgramVersions.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/training-programs/{programId:guid}/versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.listTrainingPrograms.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/training-programs",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.prepareTrainingEvidence.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/evidence-snapshots",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.recordAssessmentResult.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/assessments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.recordTheoryAttendance.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/theory-records",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.reviseAssessmentResult.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/assessments/{assessmentId}/versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.revisePracticalRecord.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/practical-records/{recordId}/versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.reviseTheoryRecord.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/theory-records/{recordId}/versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.startStudentTraining.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/student-trainings",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.verifyLessonSource.post",
+      "Service": "learning-tracking",
+      "Method": "POST",
+      "Path": "/api/v1/lessons/{lessonId}/source-verifications",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "notifications.archiveNotificationTemplate.post",
+      "Service": "notifications",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/notification-templates/{templateId}/archive",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "notifications.cancelPendingNotification.post",
+      "Service": "notifications",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/notifications/{notificationId}/cancel",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "notifications.createNotificationTemplate.post",
+      "Service": "notifications",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/notification-templates",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "notifications.getNotificationStatus.get",
+      "Service": "notifications",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/notifications/{notificationId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "notifications.getNotificationTemplate.get",
+      "Service": "notifications",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/notification-templates/{templateId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "notifications.getNotificationTemplates.get",
+      "Service": "notifications",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/notification-templates",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "notifications.updateNotificationTemplate.put",
+      "Service": "notifications",
+      "Method": "PUT",
+      "Path": "/api/v1/schools/{schoolId}/notification-templates/{templateId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.cancelAssessmentAppointment.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/assessment-appointments/{appointmentId}/cancellation",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.cancelPracticalLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons/{lessonId}/cancellation",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.cancelTheoryLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/theory-lessons/{lessonId}/cancellation",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.completePracticalLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons/{lessonId}/completion",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.completeTheoryLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/theory-lessons/{lessonId}/completion",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.confirmScheduleProposal.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/scheduling-requests/{requestId}/confirmations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.correctLessonActualInterval.patch",
+      "Service": "scheduling",
+      "Method": "PATCH",
+      "Path": "/api/v1/lessons/{lessonId}/actual-interval",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.createPracticalLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.createSchedulingDraft.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/scheduling-requests",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.createSchoolRuleVersion.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/scheduling-rule-versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.createTheoryLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/theory-lessons",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.executeConfirmedLessonBooking.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons/confirmed-bookings",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.executeConfirmedLessonRescheduling.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons/confirmed-reschedulings",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.findAvailableLessons.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/availability",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.generateScheduleProposal.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/scheduling-requests/{requestId}/proposals",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getAssessmentAppointment.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/assessment-appointments/{appointmentId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getMyLessons.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/users/me/lessons",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.listSchoolRuleVersions.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/scheduling-rule-versions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getPracticalLesson.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/practical-lessons/{lessonId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getSchedulingOperation.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/scheduling-operations/{operationId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getSchedulingRequest.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/scheduling-requests/{requestId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getSchoolRuleVersion.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/scheduling-rule-versions/{ruleVersionId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getTheoryLesson.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/theory-lessons/{lessonId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.listLessonReviews.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/lesson-reviews",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.previewPracticalBooking.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons/booking-previews",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.previewPracticalRescheduling.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons/{lessonId}/rescheduling-previews",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.reschedulePracticalLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/practical-lessons/{lessonId}/rescheduling",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.rescheduleTheoryLesson.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/theory-lessons/{lessonId}/rescheduling",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.resolveLessonReview.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/lesson-reviews/{reviewId}/resolution",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.reviseSchedulingDraft.put",
+      "Service": "scheduling",
+      "Method": "PUT",
+      "Path": "/api/v1/scheduling-requests/{requestId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.scheduleAssessmentAppointment.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/assessment-appointments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.submitSchedulingRequest.post",
+      "Service": "scheduling",
+      "Method": "POST",
+      "Path": "/api/v1/scheduling-requests/{requestId}/submissions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.1dd6b5d78aa0101e.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/enrollments/{enrollmentId}/group-removal",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.3f2bf76c9a18bd78.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/activation-operations/{operationId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.470b495cc49da960.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/memberships/{membershipId}/permissions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.4d08ca8c1d6e2192.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/permission-grants/{grantId}/revocation",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.acceptInvitation.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/invitations/{invitationId}/accept",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.assignEnrollmentGroup.put",
+      "Service": "school-management",
+      "Method": "PUT",
+      "Path": "/api/v1/schools/{schoolId}/enrollments/{enrollmentId}/group-assignment",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.assignTeacher.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/groups/{groupId}/teacher-assignments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.changeBranchStatus.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/branches/{branchId}/status",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.changeSchoolStatus.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/status",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.createBranch.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/branches",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.createEnrollment.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/enrollments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.createGroup.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/groups",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.ec86c99e74f10f09.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/activation-operations/{operationId}/abort",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.endEnrollment.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/enrollments/{enrollmentId}/termination",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.endMembership.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/memberships/{membershipId}/termination",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getBranch.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/branches/{branchId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getEnrollment.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/enrollments/{enrollmentId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getGroup.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/groups/{groupId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getInvitation.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/invitations/{invitationId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getMemberships.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/memberships",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getMyEnrollments.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/users/me/enrollments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getMyInvitations.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/users/me/invitations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getMySchools.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/users/me/schools",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getPlanningInputs.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/planning-inputs",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.getSchool.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.issueInvitation.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/invitations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.listBranches.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/branches",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.listGroups.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/groups",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.listMembershipReviews.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/membership-reviews",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.listSchoolTeachers.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/teachers",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.listVisibleEnrollments.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/enrollments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.renameGroup.patch",
+      "Service": "school-management",
+      "Method": "PATCH",
+      "Path": "/api/v1/schools/{schoolId}/groups/{groupId}/name",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.renameSchool.patch",
+      "Service": "school-management",
+      "Method": "PATCH",
+      "Path": "/api/v1/schools/{schoolId}/name",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.resolveMembershipReview.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/membership-reviews/{reviewId}/resolution",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.revokeInvitation.post",
+      "Service": "school-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/invitations/{invitationId}/revoke",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.updateBranch.put",
+      "Service": "school-management",
+      "Method": "PUT",
+      "Path": "/api/v1/schools/{schoolId}/branches/{branchId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "user-management.11c617ccb4241ae6.put",
+      "Service": "user-management",
+      "Method": "PUT",
+      "Path": "/api/v1/users/me",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "user-management.5b20969d91d554d4.get",
+      "Service": "user-management",
+      "Method": "GET",
+      "Path": "/api/v1/users/me/{role}-profile",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "user-management.82964665ca526f06.get",
+      "Service": "user-management",
+      "Method": "GET",
+      "Path": "/api/v1/users/me",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "user-management.a8dc91cd035d21ab.post",
+      "Service": "user-management",
+      "Method": "POST",
+      "Path": "/api/v1/users/me/{role}-profile",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "user-management.c4692172043a9f2e.post",
+      "Service": "user-management",
+      "Method": "POST",
+      "Path": "/api/v1/users/me",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.createVehicle.post",
+      "Service": "vehicle-management",
+      "Method": "POST",
+      "Path": "/api/v1/schools/{schoolId}/vehicles",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.getVehicle.get",
+      "Service": "vehicle-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/vehicles/{vehicleId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.getVehicleStateChangeOperation.get",
+      "Service": "vehicle-management",
+      "Method": "GET",
+      "Path": "/api/v1/vehicles/{vehicleId}/state-change-operations/{operationId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.listVehicles.get",
+      "Service": "vehicle-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/vehicles",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.replaceVehicleCategories.put",
+      "Service": "vehicle-management",
+      "Method": "PUT",
+      "Path": "/api/v1/schools/{schoolId}/vehicles/{vehicleId}/categories",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.replaceVehicleTeacherAssignments.put",
+      "Service": "vehicle-management",
+      "Method": "PUT",
+      "Path": "/api/v1/schools/{schoolId}/vehicles/{vehicleId}/teacher-assignments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.requestVehicleStateChange.post",
+      "Service": "vehicle-management",
+      "Method": "POST",
+      "Path": "/api/v1/vehicles/{vehicleId}/state-change-operations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "vehicle-management.updateVehicle.patch",
+      "Service": "vehicle-management",
+      "Method": "PATCH",
+      "Path": "/api/v1/schools/{schoolId}/vehicles/{vehicleId}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "school-management.listSchoolInvitations.get",
+      "Service": "school-management",
+      "Method": "GET",
+      "Path": "/api/v1/schools/{schoolId}/invitations",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getTheoryLessonRoster.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/lessons/{lessonId}/theory-roster",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.listTheoryLessonRecords.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/lessons/{lessonId}/theory-records",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.listAssessmentAppointments.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/assessment-appointments",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "learning-tracking.getEnrollmentAssessmentDefinitions.get",
+      "Service": "learning-tracking",
+      "Method": "GET",
+      "Path": "/api/v1/student-trainings/{enrollmentId}/assessment-definitions",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getSchedulingRequestInputs.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/scheduling-requests/{requestId}/inputs",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.listSchedulingRequests.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/scheduling-requests",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    },
+    {
+      "Id": "scheduling.getScheduleProposal.get",
+      "Service": "scheduling",
+      "Method": "GET",
+      "Path": "/api/v1/scheduling-requests/{requestId}/proposals/{revision}",
+      "Anonymous": false,
+      "FileTransfer": false,
+      "Upload": false
+    }
+  ]
+}

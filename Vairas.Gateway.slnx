@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Vairas.Gateway/Vairas.Gateway.csproj" />
+  <Project Path="Vairas.Gateway.Tests/Vairas.Gateway.Tests.csproj" />
+  <Project Path="Vairas.Gateway.ServiceTests/Vairas.Gateway.ServiceTests.csproj" />
+</Solution>
