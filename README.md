@@ -49,3 +49,15 @@ dotnet test Vairas.Gateway.slnx
 ```
 
 API exports: `api/`. Extended notes, validation reports and evidence: `../../Documentation/Backend/Vairas.Gateway/`.
+
+## Tests and coverage
+
+Requirements: .NET SDK 10 and Docker (PostgreSQL integration tests start a throw-away container via Testcontainers).
+
+```powershell
+dotnet test Vairas.Gateway.slnx                  # unit + integration tests
+dotnet test Vairas.Gateway.ServiceTests/Vairas.Gateway.ServiceTests.csproj   # end-to-end smoke test (not part of the solution)
+dotnet test Vairas.Gateway.slnx --collect:"XPlat Code Coverage" --settings coverage.runsettings --results-directory TestResults   # measure coverage
+```
+
+**Coverage report:** [docs/coverage/README.md](docs/coverage/README.md) (summary, per-assembly table, least covered files); machine-readable `docs/coverage/coverage-summary.json` and `docs/coverage/index.html` (per-file table). The raw cobertura XML of a local run is written to `TestResults/`.
